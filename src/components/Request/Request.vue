@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-lg-12" style="display: flex;flex-direction: column;text-align: left;">
                       <label for="" style="color: #8d99af;">Вид услуга</label>
-                      <select v-model="serviceType" style="height: 55px;border-radius: 7px;background: transparent;" required name="" id="">
+                      <select v-model="serviceType" style="height: 55px;border-radius: 7px;background: transparent;" required name="serviceType" id="">
                         <option value="Общи условия за сайт">Общи условия за сайт</option>
                         <option value="Общи условия за онлайн магазин">Общи условия за онлайн магазин</option>
                         <option value="Политика за защита на личните данни">Политика за защита на личните данни</option>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <textarea v-model="message" name="message" type="text" class="form-control" id="message" placeholder="Съобщение" required=""></textarea>  
+                        <textarea v-model="message" name="message" type="text" class="form-control" id="message" placeholder="Съобщение" required></textarea>  
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -55,33 +55,43 @@ export default {
             email: null,
             message: null,
             serviceType: null,
+            form: {
+              message: 'Успешно изпратихте заявление!',
+              type: 'success',
+              duration: 3000,
+              dismissible: true,
+              queue: false,
+              position: 'bottom-right',
+          },
         }
     },
     created(){
         window.scrollTo(0,0);
+        emailjs.init('FvTvghX64N2H7swm9');
     },
     methods:{
-        sendEmail(e) {
-      try {
-        emailjs.sendForm('service_uue3n9e', 'template_597bxhu', e.target,
-        'FvTvghX64N2H7swm9', {
-          name: this.name,
-          email: this.email,
-          surname: this.surname,
-          message: this.message,
-          serviceType: this.serviceType,
-        })
-
-      } catch(error) {
-          console.log({error})
-      }
-      // Reset form field
-      this.name = ''
-      this.email = ''
-      this.message = ''
-      this.surname = ''
-      this.serviceType = ''
-    },
+        sendEmail() {
+          try {
+            emailjs.send('service_uue3n9e', 'template_597bxhu',
+             {
+              name: this.name,
+              email: this.email,
+              surname: this.surname,
+              message: this.message,
+              serviceType: this.serviceType,
+            })
+            
+          } catch(error) {
+            console.log({error})
+          }
+          this.$toast.open(this.form);
+          // Reset form field
+          this.name = ''
+          this.email = ''
+          this.message = ''
+          this.surname = ''
+          this.serviceType = ''
+        },
     }
 }
 </script>
@@ -93,5 +103,8 @@ export default {
         background: #f7f7f7;
         padding: 20px;
         border-radius: 20px;
+    }
+    .v-toast__item p{
+      color: white;
     }
 </style>

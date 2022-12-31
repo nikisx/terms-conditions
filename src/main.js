@@ -1,8 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import ToastPlugin from 'vue-toast-notification';
 import { createWebHistory, createRouter } from 'vue-router';
 import Home from './components/HelloWorld.vue';
 import Request from './components/Request/Request.vue';
+import 'vue-toast-notification/dist/theme-sugar.css';
 
 const routes = [
 	{
@@ -22,4 +24,4 @@ const router = createRouter({
 	routes,
 });
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(ToastPlugin).mount('#app')
