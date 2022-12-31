@@ -1,32 +1,152 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="top-text header-text" >
+            <!-- <h6>Над 300+ доволни клиенти</h6> -->
+            <h2 style="text-transform: none;">Добавете сигурност за вашия бизнес</h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+         
+        </div>
+        <div class="col-lg-10 offset-lg-1" style="margin-left: 22.333333%;">
+          <ul class="categories" style="display: flex; gap: 20px;">
+            <li><a @click="scrollTo('terms')" style="cursor: pointer"><span class="icon"><img src="../assets/images/search-icon-01.png" alt="Home"></span> Общи условия за уебсайт</a></li>
+            <li><a @click="scrollTo('shop')" style="cursor: pointer"><span class="icon"><img src="../assets/images/search-icon-02.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
+            <li><a @click="scrollTo('gdpr')" style="cursor: pointer" ><span class="icon"><img src="../assets/images/search-icon-03.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
+            <!-- <li><a href="#"><span class="icon"><img src="../assets/images/search-icon-04.png" alt="Shopping"></span> Политика за бисквитки</a></li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-lg-12 nice-font">
+          <div class="section-heading">
+            <h2>Popular Categories</h2>
+            <h6>Check Them Out</h6>
+          </div>
+  </div> -->
+  <!-- <div class="icons-wrapper">
+    <div style="display:flex; flex-direction: column">
+      <div @click="selectedIconTab = 1" class="icon-container" style="border-top-left-radius: 10px;" :style="{background: selectedIconTab == 1 ? '#2b2d42' : '#8d99af'}"><span class="icon-new"><img src="../assets/images/search-icon-01.png" alt=""></span> Apartaments</div>
+      <div @click="selectedIconTab = 2" class="icon-container" :style="{background: selectedIconTab == 2 ? '#2b2d42' : '#8d99af'}"><span class="icon-new"><img src="../assets/images/search-icon-02.png" alt=""></span> Food</div>
+      <div @click="selectedIconTab = 3" class="icon-container" :style="{background: selectedIconTab == 3 ? '#2b2d42' : '#8d99af'}"><span class="icon-new"><img src="../assets/images/search-icon-04.png" alt=""></span> Shop</div>
+    </div>
+    <transition name="slide-fade" mode="out-in">
+        <div v-if="selectedIconTab == 1" style="display: flex;align-items: center;gap: 52px;">
+      <div style="width: 43%;">
+          <h4 class="nice-font" style="color: white; font-size: 20px;">One Of The Most Trending Stuffs Right Now!</h4>
+          <p style="color: white;">Plot Listing is a responsive Bootstrap 5 website template that included 4 different HTML pages. This template is provided by TemplateMo website. You can apply this layout for your static or dynamic CMS websites.</p>
+        </div>
+        <img src="../assets/images/tabs-image-01.jpg" style="width: 286px;height: 292px;border-radius: 10px;" alt="">
+      </div>
+      <div v-else-if="selectedIconTab == 2" style="display: flex;align-items: center;gap: 52px;">
+      <div style="width: 43%;">
+          <h4 class="nice-font" style="color: white; font-size: 20px;">Food and Lifestyle category is here</h4>
+          <p style="color: white;">You can feel free to download, edit and apply this template for your website. Please tell your friends about TemplateMo website.</p>
+        </div>
+        <img src="../assets/images/tabs-image-02.jpg" style="width: 286px;height: 292px;border-radius: 10px;" alt="">
+      </div>
+      <div v-else-if="selectedIconTab == 3" style="display: flex;align-items: center;gap: 52px;">
+      <div style="width: 43%;">
+          <h4 class="nice-font" style="color: white; font-size: 20px;">Shopping List: Images from Unsplash</h4>
+          <p style="color: white;">Image credits go to Unsplash website that provides free stock photos for anyone. Images used in this Plot Listing template are from Unsplash.</p>
+        </div>
+        <img src="../assets/images/tabs-image-04.jpg" style="width: 286px;height: 292px;border-radius: 10px;" alt="">
+      </div>
+    </transition>
+  </div> -->
+
+  <div class="recent-listing">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Услуги</h2>
+          </div>
+        </div>
+       <section id="services" class="services-wrapper">
+          <article id="terms" class="service-details">
+            <img class="service-image" src="../assets/images/terms-and-conditions.jpg" alt="">
+            <div class="services-row">
+              <div class="service-info nice-font">
+                <b class="nice-font service-name">Общи условия за сайт</b>
+                <p style="text-align: justify;">Всеки собственик на сайт влиза в регулирани от правото отношения със своите
+                  потребители, без значение дали става въпрос за онлайн магазин или чисто
+                  информативен сайт. В редица случаи общите условия за подобен тип сайтове се
+                  пренебрегват и това води до неблагоприятни последствия за създателите им. Нашият
+                  екип от юристи е готов да Ви предложи бърз и лесен начин за уреждане на
+                  отношенията между вас и потребителите посещаващи вашия сайт.
+                </p>
+              </div>
+              
+              <div class="nice-font services-price" style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 100.00 лв.</p>
+                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+              </div>
+            </div>
+            <div class="request-online-btn main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            </div>
+          </article>
+          <article id="shop" class="service-details" style="margin-top: 40px;">
+            <img class="service-image" style="    height: 413px;width: 420px;" src="../assets/images/online-shop.jpg" alt="">
+            <div class="services-row">
+              <div class="service-info nice-font">
+                <b class="nice-font service-name">Общи условия за онлайн магазин</b>
+                <p style="text-align: justify;">Общите условия са най-добрият вариант за уреждане на отношенията между
+                    търговците, които сключват много на брой едностранни сделки с потребителите
+                    използващи техните онлайн магазини. Законът за защита на потребителите задължава
+                    собствениците на онлайн магазини да предоставят голям набор от информация
+                    относно описанието на стоките и услугите, които предлагат; начинът на сключване на
+                    договорите; условията за плащане; информация за търговеца предлагащ определена
+                    услуга или продукт и други съществени елементи на договора, който се сключва между
+                    търговеца и потребителя. Използването на Общи условия, които не са изготвени от
+                    юрист специално за Вас могат да Ви обвържат със задължения, които не са
+                    благоприятни за Вас. В случаи, че възнамерявате да започнете свой онлайн бизнес ние
+                    сме готови да предложим изработването на общи условия, с които да защитите себе си
+                    и бизнеса си.
+                </p>
+              </div>
+              
+              <div class="nice-font services-price" style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 200.00 лв.</p>
+                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+              </div>
+            </div>
+            <div class="request-online-btn main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            </div>
+          </article>
+          <article id="gdpr" class="service-details"  style="margin-top: 40px;">
+            <img class="service-image" src="../assets/images/GDPR.png" alt="">
+            <div class="services-row">
+              <div class="service-info nice-font">
+                <b class="nice-font service-name">Политика за поверителност на личните данни</b>
+                <p style="text-align: justify;">С приемането на регламента за защита на личните данни (GDPR) се въведоха редица
+                  правила относно обработването на личните данни на потребителите посещаващи
+                  интернет сайтове. Всеки сайт трябва изчерпателно да опише какви лични данни
+                  обработва, а потребителят трябва да даде съгласие за това. Вземайки предвид
+                  сериозната регулация относно обработването на личните данни на потребителите на
+                  сайтове ние Ви предлагаме индивидуално изготвена и съобразена със спецификите на
+                  вашия сайт политика за защита на личните данни.
+                </p>
+              </div>
+              
+              <div class="nice-font services-price" style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 80.00 лв.</p>
+                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+              </div>
+            </div>
+            <div class="request-online-btn main-white-button">
+                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            </div>
+          </article>
+       </section>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,24 +155,117 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data(){
+    return{
+      selectedIconTab: 1,
+    }
+  },
+  methods:{
+      scrollTo(ref) {
+        const element = document.getElementById(ref);
+        let position = element.getBoundingClientRect().top -100
+
+        window.scrollTo(0, position);
+    },
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+  .icon-new{
+    display: flex;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 62px;
+    color: #8d99af;
+    background-color: #fff;
+    margin-right: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-new img{
+    width: 34px;
+    height: 34px;
+  }
+  .icons-wrapper{
+    background: #2b2d42;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  .icon-container{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    background: #8d99af;
+    border-bottom: 1px solid #2b2d42;
+    width: 275px;
+    cursor: pointer;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .nice-font{
+    font-family: 'Montserrat', sans-serif;
+  }.slide-fade-enter-active {
+  transition: all .3s ease;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.slide-fade-enter-from, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
-a {
-  color: #42b983;
+.services-price{
+    position: absolute;
+    top: 12px;
+    right: 4px;
+    width: 169px;
+}
+.services-row{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    align-items: center;
+    gap: 37px;
+}
+
+.service-details{
+    display: flex;
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+}
+.service-name{
+    font-size: 20px;
+    color: #2a2a2a;
+    font-weight: 700;
+}
+.service-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 73%;
+}
+.request-online-btn{
+  bottom: 12px;
+    right: 12px;
+    position: absolute;
+}
+.service-image{
+    width: 400px;
+    margin-right: 5%;
+    height: 253px;
+    object-fit: cover;
 }
 </style>
