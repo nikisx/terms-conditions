@@ -87,8 +87,8 @@
                 <p><b>Срок:</b>в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div class="request-online-btn main-white-button">
-                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
           <article id="shop" class="service-details" style="margin-top: 40px;">
@@ -116,8 +116,8 @@
                 <p><b>Срок:</b>в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div class="request-online-btn main-white-button">
-                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
           <article id="gdpr" class="service-details"  style="margin-top: 40px;">
@@ -140,8 +140,8 @@
                 <p><b>Срок:</b>в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div class="request-online-btn main-white-button">
-                        <a href="contact.html"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
        </section>

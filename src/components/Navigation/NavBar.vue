@@ -11,7 +11,7 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a @click="$router.push({name: 'home'})" style="cursor: pointer;" :class="{'active': $route.name == 'home'}">Начало</a></li>
-              <li><a @click="scrollTo('services')" style="cursor: pointer;">Услуги</a></li>
+              <li><a @click="redirectToServices()" style="cursor: pointer;">Услуги</a></li>
               <li><a style="cursor: pointer;">Контакти</a></li> 
               <li><a style="cursor: pointer;">Често задавани въпроси</a></li> 
               <li @click="$router.push({name: 'request'})"><div class="main-white-button"><a style="cursor: pointer;"><i class="fa fa-plus"></i> Заяви онлайн</a></div></li> 
@@ -30,6 +30,15 @@
 <script>
 export default {
     methods:{
+      redirectToServices(){
+        if (this.$route.name != 'home') {
+          this.$router.push({name: 'home'})
+        }
+        setTimeout(() => {
+          this.scrollTo('services');
+        }, "200")
+       
+      },
       handleSCroll () {
         let header = document.querySelector(".header-area");
         if (window.scrollY > 100 && !header.className.includes('background-header')) {
