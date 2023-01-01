@@ -39,10 +39,10 @@
             <p>27th Street of New Town, Digital Villa</p>
             <div class="row">
               <div class="col-lg-6">
-                <a href="#">010-020-0340</a>
+                <a href="#">087 847 8262</a>
               </div>
               <div class="col-lg-6">
-                <a href="#">090-080-0760</a>
+                <a href="#">087 927 7894</a>
               </div>
             </div>
           </div>
