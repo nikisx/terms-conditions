@@ -22,6 +22,7 @@
                     <div class="col-lg-12" style="display: flex;flex-direction: column;text-align: left;">
                       <label for="" style="color: #8d99af;">Вид услуга</label>
                       <select v-model="serviceType" style="height: 55px;border-radius: 7px;background: transparent;" required name="serviceType" id="">
+                        <option value="Моля изберете вид услуга" style="display: none" disabled >Моля изберете вид услуга</option>
                         <option value="Общи условия за сайт">Общи условия за сайт</option>
                         <option value="Общи условия за онлайн магазин">Общи условия за онлайн магазин</option>
                         <option value="Политика за защита на личните данни">Политика за защита на личните данни</option>
@@ -54,7 +55,7 @@ export default {
             surname: null,
             email: null,
             message: null,
-            serviceType: null,
+            serviceType: 'Моля изберете вид услуга',
             form: {
               message: 'Успешно изпратихте заявление!',
               type: 'success',
@@ -106,5 +107,10 @@ export default {
     }
     .v-toast__item p{
       color: white;
+    }
+    @media only screen and (max-width: 768px){
+      .contact-form {
+        width: 98%;
+      }
     }
 </style>

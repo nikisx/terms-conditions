@@ -16,7 +16,7 @@
               <li><a style="cursor: pointer;">Често задавани въпроси</a></li> 
               <li @click="$router.push({name: 'request'})"><div class="main-white-button"><a style="cursor: pointer;"><i class="fa fa-plus"></i> Заяви онлайн</a></div></li> 
             </ul>        
-            <a class='menu-trigger'>
+            <a @click="toggleMobileMenu()" id="menu-trigger" class='menu-trigger'>
                 <span>Menu</span>
             </a>
             <!-- ***** Menu End ***** -->
@@ -30,6 +30,18 @@
 <script>
 export default {
     methods:{
+      toggleMobileMenu(){
+
+        const element = document.getElementById('menu-trigger');
+        if (element.className.includes('active')) {
+          element.classList.remove('active');
+          element.previousSibling.style.display = 'none';
+        }
+        else{
+          element.classList.add('active');
+          element.previousSibling.style.display = 'block';
+        }
+      },
       redirectToServices(){
         if (this.$route.name != 'home') {
           this.$router.push({name: 'home'})
@@ -57,6 +69,13 @@ export default {
         
     },
     },
+    watch:{
+      $route (){
+        const element = document.getElementById('menu-trigger');
+          element.classList.remove('active');
+          element.previousSibling.style.display = 'none';
+      }
+   },
     created () {
       window.addEventListener('scroll', this.handleSCroll);
     },

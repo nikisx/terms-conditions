@@ -11,7 +11,7 @@
         <div class="col-lg-12">
          
         </div>
-        <div class="col-lg-10 offset-lg-1" style="margin-left: 22.333333%;">
+        <div class="col-lg-10 offset-lg-1 icons-home" >
           <ul class="categories" style="display: flex; gap: 20px;">
             <li><a @click="scrollTo('terms')" style="cursor: pointer"><span class="icon"><img src="../assets/images/search-icon-01.png" alt="Home"></span> Общи условия за уебсайт</a></li>
             <li><a @click="scrollTo('shop')" style="cursor: pointer"><span class="icon"><img src="../assets/images/search-icon-02.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
@@ -174,6 +174,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+  .icons-home{
+    margin-left: 22.333333% !important;
+  }
+
   .icon-new{
     display: flex;
     width: 66px;
@@ -267,5 +272,27 @@ export default {
     margin-right: 5%;
     height: 253px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 768px){
+  .icons-home{
+    margin-left: 8.3333% !important;
+  }
+
+  .service-details{
+    flex-direction: column;
+  }
+  .service-image{
+    width: 100% !important;
+    margin-top: 89px;
+    margin-right: unset;
+  }
+  .services-row{
+    padding-bottom: 33px;
+    width: 100%;
+  }
+  .service-info{
+    width: 100%;
+  }
 }
 </style>
