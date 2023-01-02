@@ -36,7 +36,7 @@
         <div class="col-lg-4">
           <div class="contact-us">
             <h4>Контакти</h4>
-            <p>global.biznes.consult@gmail.com</p>
+            <!-- <p>global.biznes.consult@gmail.com</p> -->
             <div class="row">
               <div class="col-lg-6">
                 <a href="#">087 847 8262</a>

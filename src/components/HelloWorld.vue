@@ -284,15 +284,25 @@ export default {
   }
   .service-image{
     width: 100% !important;
-    margin-top: 89px;
+    margin-top: 52px;
     margin-right: unset;
   }
   .services-row{
-    padding-bottom: 33px;
+    padding-bottom: 136px;
     width: 100%;
   }
   .service-info{
     width: 100%;
+  }
+  .services-price{
+    bottom: 61px;
+    left: 4px;
+    width: 278px;
+    top: unset;
+  }
+  .service-name{
+    position: absolute;
+    top: 7px;
   }
 }
 </style>
