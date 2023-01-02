@@ -90,7 +90,7 @@ export default {
   .company-name{
     font-weight: bold;
     position: absolute;
-    left: 236px;
+    left: 18%;
     color: white;
     font-size: 20px;
     top: 36px;
