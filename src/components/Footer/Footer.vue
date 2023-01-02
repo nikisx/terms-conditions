@@ -5,9 +5,9 @@
         <div class="col-lg-4">
           <div class="about">
             <div class="logo">
-              <img src="../../assets/images/black-logo.png" alt="Plot Listing">
+              <img src="../../assets/images/new-logo.png" style="max-width: 80px" alt="Plot Listing">
             </div>
-            <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p>
+            <!-- <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p> -->
           </div>
         </div>
         <div class="col-lg-4">
@@ -35,8 +35,8 @@
         </div>
         <div class="col-lg-4">
           <div class="contact-us">
-            <h4>Contact Us</h4>
-            <p>27th Street of New Town, Digital Villa</p>
+            <h4>Контакти</h4>
+            <p>global.biznes.consult@gmail.com</p>
             <div class="row">
               <div class="col-lg-6">
                 <a href="#">087 847 8262</a>

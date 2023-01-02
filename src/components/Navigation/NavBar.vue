@@ -3,9 +3,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <nav class="main-nav">
+          <nav class="main-nav" style="position: relative">
             <!-- ***** Logo Start ***** -->
             <a @click="$router.push({name: 'home'})" style="cursor: pointer;" class="logo">
+              <p class="company-name nice-font">Общи условия</p>  
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -86,5 +87,13 @@ export default {
 </script>
 
 <style>
-
+  .company-name{
+    font-weight: bold;
+    position: absolute;
+    left: 236px;
+    color: white;
+    font-size: 20px;
+    top: 36px;
+    font-family: 'Montserrat', sans-serif;
+  }
 </style>

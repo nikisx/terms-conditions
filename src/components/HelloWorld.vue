@@ -84,7 +84,7 @@
               
               <div class="nice-font services-price" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 100.00 лв.</p>
-                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
             <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
@@ -113,7 +113,7 @@
               
               <div class="nice-font services-price" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 200.00 лв.</p>
-                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
             <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
@@ -137,7 +137,7 @@
               
               <div class="nice-font services-price" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 80.00 лв.</p>
-                <p><b>Срок:</b>в рамките на 5 работни дни.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
             <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
