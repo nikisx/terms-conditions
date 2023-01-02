@@ -48,9 +48,13 @@ export default {
           this.$router.push({name: 'home'})
         }
         setTimeout(() => {
-          this.scrollTo('services');
+          this.scrollTo(1000);
         }, "200")
-       
+        const element = document.getElementById('menu-trigger');
+        if (element.className.includes('active')) {
+          element.classList.remove('active');
+          element.previousSibling.style.display = 'none';
+        }
       },
       handleSCroll () {
         let header = document.querySelector(".header-area");
@@ -60,11 +64,11 @@ export default {
           header.classList.remove('background-header');
         }
       },
-      scrollTo(ref) {
-        const element = document.getElementById(ref);
-        const y = element.getBoundingClientRect().top + -300;
+      scrollTo(distance) {
+        // const element = document.getElementById(ref);
+        // const y = element.getBoundingClientRect().top + -300;
         window.scroll({
-          top: y,
+          top: distance,
           behavior: 'smooth'
         });
         

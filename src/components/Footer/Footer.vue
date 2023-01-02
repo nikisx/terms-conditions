@@ -39,10 +39,10 @@
             <!-- <p>global.biznes.consult@gmail.com</p> -->
             <div class="row">
               <div class="col-lg-6">
-                <a href="#">087 847 8262</a>
+                <a>087 847 8262</a>
               </div>
               <div class="col-lg-6">
-                <a href="#">087 927 7894</a>
+                <a >087 927 7894</a>
               </div>
             </div>
           </div>
