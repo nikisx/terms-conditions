@@ -14,7 +14,7 @@
               <li><a @click="$router.push({name: 'home'})" style="cursor: pointer;" :class="{'active': $route.name == 'home'}">Начало</a></li>
               <li><a @click="redirectToServices()" style="cursor: pointer;">Услуги</a></li>
               <li><a style="cursor: pointer;">Контакти</a></li> 
-              <li><a style="cursor: pointer;">Често задавани въпроси</a></li> 
+              <li><a @click="$router.push({name: 'faq'})" :class="{'active': $route.name == 'faq'}" style="cursor: pointer;">Често задавани въпроси</a></li> 
               <li @click="$router.push({name: 'request'})"><div class="main-white-button"><a style="cursor: pointer;"><i class="fa fa-plus"></i> Заяви онлайн</a></div></li> 
             </ul>        
             <a @click="toggleMobileMenu()" id="menu-trigger" class='menu-trigger'>

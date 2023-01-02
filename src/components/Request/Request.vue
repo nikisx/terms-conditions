@@ -67,7 +67,7 @@ export default {
         }
     },
     created(){
-        window.scrollTo(0,0);
+       
         emailjs.init('FvTvghX64N2H7swm9');
     },
     methods:{
