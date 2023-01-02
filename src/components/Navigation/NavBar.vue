@@ -6,7 +6,7 @@
           <nav class="main-nav" style="position: relative">
             <!-- ***** Logo Start ***** -->
             <a @click="$router.push({name: 'home'})" style="cursor: pointer;" class="logo">
-              <p class="company-name nice-font">Общи условия</p>  
+              <!-- <p class="company-name nice-font">Общи условия</p>   -->
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
