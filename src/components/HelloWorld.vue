@@ -296,7 +296,7 @@ export default {
   }
   .services-price{
     bottom: 61px;
-    left: 4px;
+    left: 16px;
     width: 278px;
     top: unset;
   }
