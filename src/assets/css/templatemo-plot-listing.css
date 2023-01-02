@@ -1915,7 +1915,9 @@ Pre Loader
     border-radius: 50%;
 }
 
-
+.mobile{
+  display: none;
+}
 /* 
 ---------------------------------------------
 responsive
@@ -2083,5 +2085,8 @@ responsive
   }
   .category-post .icon {
     transform: translateX(-22px);
+  }
+  .desctop{
+    display: none;
   }
 }

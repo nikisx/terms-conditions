@@ -69,10 +69,11 @@
         </div>
        <section id="services" class="services-wrapper">
           <article id="terms" class="service-details">
+            <b v-if="isMobile" class="nice-font service-name ">Общи условия за сайт</b>
             <img class="service-image" src="../assets/images/terms-and-conditions.jpg" alt="">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name">Общи условия за сайт</b>
+                <b class="nice-font service-name desctop">Общи условия за сайт</b>
                 <p style="text-align: justify;">Всеки собственик на сайт влиза в регулирани от правото отношения със своите
                   потребители, без значение дали става въпрос за онлайн магазин или чисто
                   информативен сайт. В редица случаи общите условия за подобен тип сайтове се
@@ -82,20 +83,30 @@
                 </p>
               </div>
               
-              <div class="nice-font services-price" style="text-align: left;">
+              <div class="nice-font services-price desctop" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 100.00 лв.</p>
                 <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+            <div v-if="isMobile">
+              <div class="nice-font services-price " style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 100.00 лв.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
+              </div>
+              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+              </div>
+            </div>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
                         <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
           <article id="shop" class="service-details" style="margin-top: 40px;">
+            <b v-if="isMobile" class="nice-font service-name ">Общи условия за онлайн магазин</b>
             <img class="service-image" style="    height: 413px;width: 420px;" src="../assets/images/online-shop.jpg" alt="">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name">Общи условия за онлайн магазин</b>
+                <b class="nice-font service-name desctop">Общи условия за онлайн магазин</b>
                 <p style="text-align: justify;">Общите условия са най-добрият вариант за уреждане на отношенията между
                     търговците, които сключват много на брой едностранни сделки с потребителите
                     използващи техните онлайн магазини. Законът за защита на потребителите задължава
@@ -111,20 +122,30 @@
                 </p>
               </div>
               
-              <div class="nice-font services-price" style="text-align: left;">
+              <div class="nice-font services-price desctop" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 200.00 лв.</p>
                 <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+            <div v-if="isMobile">
+              <div class="nice-font services-price " style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 200.00 лв.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
+              </div>
+              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+              </div>
+            </div>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
                         <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
           <article id="gdpr" class="service-details"  style="margin-top: 40px;">
+            <b v-if="isMobile" class="nice-font service-name">Политика за поверителност на личните данни</b>
             <img class="service-image" src="../assets/images/GDPR.png" alt="">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name">Политика за поверителност на личните данни</b>
+                <b class="nice-font service-name desctop">Политика за поверителност на личните данни</b>
                 <p style="text-align: justify;">С приемането на регламента за защита на личните данни (GDPR) се въведоха редица
                   правила относно обработването на личните данни на потребителите посещаващи
                   интернет сайтове. Всеки сайт трябва изчерпателно да опише какви лични данни
@@ -135,12 +156,21 @@
                 </p>
               </div>
               
-              <div class="nice-font services-price" style="text-align: left;">
+              <div class="nice-font services-price desctop" style="text-align: left;">
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 80.00 лв.</p>
                 <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
             </div>
-            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+            <div v-if="isMobile">
+              <div class="nice-font services-price " style="text-align: left;">
+                <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 80.00 лв.</p>
+                <p><b>Срок:</b> в рамките на 5 работни дни.</p>
+              </div>
+              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+              </div>
+            </div>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
                         <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
@@ -290,7 +320,6 @@ export default {
   }
   .service-image{
     width: 100% !important;
-    margin-top: 52px;
     margin-right: unset;
   }
   .services-row{
@@ -305,10 +334,6 @@ export default {
     left: 16px;
     width: 278px;
     top: unset;
-  }
-  .service-name{
-    position: absolute;
-    top: 7px;
   }
 }
 </style>
