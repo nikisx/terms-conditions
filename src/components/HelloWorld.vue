@@ -13,9 +13,9 @@
         </div>
         <div class="col-lg-10 offset-lg-1 icons-home" >
           <ul class="categories" style="display: flex; gap: 20px;">
-            <li><a @click="scrollTo(1200)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-terms-and-conditions-64.png" alt="Home"></span> Общи условия за уебсайт</a></li>
-            <li><a @click="scrollTo(2100)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-negotiation-64.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
-            <li><a @click="scrollTo(3550)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/icons8-gdpr-64.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
+            <li><a @click="scrollTo(isMobile ? 1200 : 900)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-terms-and-conditions-64.png" alt="Home"></span> Общи условия за уебсайт</a></li>
+            <li><a @click="scrollTo(isMobile ? 2100 : 1350)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-negotiation-64.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
+            <li><a @click="scrollTo(isMobile ? 3550 : 1800)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/icons8-gdpr-64.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
             <!-- <li><a href="#"><span class="icon"><img src="../assets/images/search-icon-04.png" alt="Shopping"></span> Политика за бисквитки</a></li> -->
           </ul>
         </div>
@@ -161,11 +161,17 @@ export default {
       selectedIconTab: 1,
     }
   },
+  computed:{
+    isMobile(){
+      return window.innerWidth <= 768;
+    },
+  },
   methods:{
       scrollTo(position) {
         // const element = document.getElementById(ref);
         // let position = element.getBoundingClientRect().top -100
 
+       
         window.scrollTo(0, position);
     },
     }
