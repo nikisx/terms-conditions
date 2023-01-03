@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <nav class="main-nav" style="position: relative">
+          <nav class="main-nav nice-font" style="position: relative">
             <!-- ***** Logo Start ***** -->
             <a @click="$router.push({name: 'home'})" style="cursor: pointer;" class="logo">
               <!-- <p class="company-name nice-font">Общи условия</p>   -->
@@ -13,7 +13,7 @@
             <ul class="nav">
               <li><a @click="$router.push({name: 'home'})" style="cursor: pointer;" :class="{'active': $route.name == 'home'}">Начало</a></li>
               <li><a @click="redirectToServices()" style="cursor: pointer;">Услуги</a></li>
-              <li><a style="cursor: pointer;">Контакти</a></li> 
+              <!-- <li><a style="cursor: pointer;">Контакти</a></li>  -->
               <li><a @click="$router.push({name: 'faq'})" :class="{'active': $route.name == 'faq'}" style="cursor: pointer;">Често задавани въпроси</a></li> 
               <li @click="$router.push({name: 'request'})"><div class="main-white-button"><a style="cursor: pointer;"><i class="fa fa-plus"></i> Заяви онлайн</a></div></li> 
             </ul>        

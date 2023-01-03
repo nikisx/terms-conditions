@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <div class="top-text header-text" >
             <!-- <h6>Над 300+ доволни клиенти</h6> -->
-            <h2 style="text-transform: none;">Добавете сигурност за вашия бизнес</h2>
+            <h2 class="nice-font" style="text-transform: none;">Добавете сигурност за вашия бизнес</h2>
           </div>
         </div>
         <div class="col-lg-12">
@@ -209,6 +209,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+.nice-font{
+    font-family: 'Montserrat', sans-serif;
+  }
+</style>
 <style scoped>
 
   .icons-home{
@@ -253,7 +258,8 @@ export default {
   }
   .nice-font{
     font-family: 'Montserrat', sans-serif;
-  }.slide-fade-enter-active {
+  }
+  .slide-fade-enter-active {
   transition: all .3s ease;
 }
 .slide-fade-leave-active {

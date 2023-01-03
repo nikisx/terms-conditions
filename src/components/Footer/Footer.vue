@@ -10,7 +10,7 @@
             <!-- <p>If you consider that <a rel="nofollow" href="https://templatemo.com/tm-564-plot-listing" target="_parent">Plot Listing template</a> is useful for your website, please <a rel="nofollow" href="https://www.paypal.me/templatemo" target="_blank">support us</a> a little via PayPal.</p> -->
           </div>
         </div>
-        <div class="col-lg-4">
+        <!-- <div class="col-lg-4">
           <div class="helpful-links">
             <h4>Helpful Links</h4>
             <div class="row">
@@ -32,9 +32,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="col-lg-4">
-          <div class="contact-us">
+          <div class="contact-us nice-font">
             <h4>Контакти</h4>
             <!-- <p>global.biznes.consult@gmail.com</p> -->
             <div class="row">
@@ -49,9 +49,10 @@
         </div>
         <div class="col-lg-12">
           <div class="sub-footer">
-            <p>Copyright © 2021 Plot Listing Co., Ltd. All Rights Reserved.
-            <br>
-			Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p>
+            <!-- <p>Copyright © 2021 Plot Listing Co., Ltd. All Rights Reserved.
+              <br>
+              Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p> -->
+              <p> Design: <a rel="nofollow" href="https://templatemo.com" title="CSS Templates">TemplateMo</a></p>
           </div>
         </div>
       </div>
