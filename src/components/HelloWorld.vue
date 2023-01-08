@@ -177,7 +177,7 @@
           <article id="gdpr" class="service-details"  style="margin-top: 40px;">
             <b v-if="isMobile" class="nice-font service-name">Заяви онлайн консултация</b>
             <img class="service-image" src="../assets/images/consultation.jpg" alt="">
-            <div class="services-row" style="padding-bottom: 0;">
+            <div class="services-row" :style="{'padding-bottom': isMobile ? '43px' : 0}">
               <div class="service-info nice-font">
                 <b class="nice-font service-name desctop">Заяви онлайн консултация</b>
                 <p style="text-align: justify;">В случай, че желаеш да стартираш свой онлайн бизнес или сайт предоставящ определена
@@ -186,6 +186,12 @@
                 действия, които трябва да предприемеш. Възползвай се от нашата услуга, а ние ще ти
                 предоставим цялата информация, която ти е нужна за да реализираш своите идеи.
                 </p>
+              </div>
+            </div>
+            <div v-if="isMobile">
+             
+              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
               </div>
             </div>
             <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
