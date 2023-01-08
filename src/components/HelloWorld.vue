@@ -16,7 +16,7 @@
             <li><a @click="scrollTo(isMobile ? 1200 : 900)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-terms-and-conditions-64.png" alt="Home"></span> Общи условия за уебсайт</a></li>
             <li><a @click="scrollTo(isMobile ? 2100 : 1350)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-negotiation-64.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
             <li><a @click="scrollTo(isMobile ? 3550 : 1800)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/icons8-gdpr-64.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
-            <!-- <li><a href="#"><span class="icon"><img src="../assets/images/search-icon-04.png" alt="Shopping"></span> Политика за бисквитки</a></li> -->
+            <li><a @click="scrollTo(isMobile ? 4500 : 2200)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/scales-justice-lawyer-svgrepo-com.svg" alt="Vehicle"></span>Консултация</a></li>
           </ul>
         </div>
       </div>
@@ -174,6 +174,24 @@
                         <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
             </div>
           </article>
+          <article id="gdpr" class="service-details"  style="margin-top: 40px;">
+            <b v-if="isMobile" class="nice-font service-name">Заяви онлайн консултация</b>
+            <img class="service-image" src="../assets/images/consultation.jpg" alt="">
+            <div class="services-row" style="padding-bottom: 0;">
+              <div class="service-info nice-font">
+                <b class="nice-font service-name desctop">Заяви онлайн консултация</b>
+                <p style="text-align: justify;">В случай, че желаеш да стартираш свой онлайн бизнес или сайт предоставящ определена
+                информация, но не си запознат с юридическия аспект и стъпките, които трябва да направиш за
+                да го създадеш, нашият екип е готов да укаже съдействие относно всички необходими
+                действия, които трябва да предприемеш. Възползвай се от нашата услуга, а ние ще ти
+                предоставим цялата информация, която ти е нужна за да реализираш своите идеи.
+                </p>
+              </div>
+            </div>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            </div>
+          </article>
        </section>
       </div>
     </div>
@@ -217,7 +235,7 @@ export default {
 <style scoped>
 
   .icons-home{
-    margin-left: 22.333333% !important;
+    margin-left: 14.333333% !important;
   }
 
   .icon-new{
@@ -318,7 +336,7 @@ export default {
 
 @media only screen and (max-width: 768px){
   .icons-home{
-    margin-left: 8.3333% !important;
+    margin-left: -0.6667% !important;
   }
 
   .service-details{

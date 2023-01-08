@@ -31,12 +31,7 @@ const router = createRouter({
 	scrollBehavior() {
 		// always scroll to top
 		return { top: 0 }
-	  },
+	},
 });
-
-router.beforeEach(() => {
-	window.scrollTo(0, 0)
-	// ...
-  })
 
 createApp(App).use(router).use(ToastPlugin).mount('#app')
