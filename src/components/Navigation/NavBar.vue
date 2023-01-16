@@ -48,7 +48,7 @@ export default {
           this.$router.push({name: 'home'})
         }
         setTimeout(() => {
-          this.scrollTo(1000);
+          this.scrollTo(900);
         }, "200")
         const element = document.getElementById('menu-trigger');
         if (element.className.includes('active')) {
