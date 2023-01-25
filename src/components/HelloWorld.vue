@@ -5,7 +5,7 @@
         <div class="col-lg-12">
           <div class="top-text header-text" >
             <!-- <h6>Над 300+ доволни клиенти</h6> -->
-            <h2 class="nice-font" style="text-transform: none;">Добавете сигурност за вашия бизнес</h2>
+            <h1 class="nice-font" style="    text-transform: none;color: white;font-weight: bold;font-size: 45px;">Добавете сигурност за вашия бизнес</h1>
           </div>
         </div>
         <div class="col-lg-12">
@@ -13,10 +13,10 @@
         </div>
         <div class="col-lg-10 offset-lg-1 icons-home" >
           <ul class="categories" style="display: flex; gap: 20px;">
-            <li><a @click="scrollTo(isMobile ? 1200 : 900)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-terms-and-conditions-64.png" alt="Home"></span> Общи условия за уебсайт</a></li>
-            <li><a @click="scrollTo(isMobile ? 2100 : 1350)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-negotiation-64.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
-            <li><a @click="scrollTo(isMobile ? 3550 : 1800)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/icons8-gdpr-64.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
-            <li><a @click="scrollTo(isMobile ? 4500 : 2200)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/scales-justice-lawyer-svgrepo-com.svg" alt="Vehicle"></span>Консултация</a></li>
+            <li><a @click="scrollTo(isMobile ? 1200 : 900)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/scales-justice-lawyer-svgrepo-com.svg" alt="Vehicle"></span>Консултация</a></li>
+            <li><a @click="scrollTo(isMobile ? 1900 : 1350)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-terms-and-conditions-64.png" alt="Home"></span> Общи условия за уебсайт</a></li>
+            <li><a @click="scrollTo(isMobile ? 2800 : 1600)" style="cursor: pointer"><span class="icon"><img src="../assets/images/icons8-negotiation-64.png" alt="Food"></span> Общи условия за онлайн магазин</a></li>
+            <li><a @click=" scrollTo(isMobile ? 4200 : 2100)" style="cursor: pointer" ><span class="icon"><img src="../assets/images/icons8-gdpr-64.png" alt="Vehicle"></span> Поверителност на личните данни</a></li>
           </ul>
         </div>
       </div>
@@ -68,12 +68,36 @@
           </div>
         </div>
        <section id="services" class="services-wrapper">
-          <article id="terms" class="service-details">
+        <article id="gdpr" class="service-details"  >
+            <b v-if="isMobile" class="nice-font service-name">Заяви онлайн консултация</b>
+            <img class="service-image" src="../assets/images/consultation.jpg" alt="Handshake">
+            <div class="services-row" :style="{'padding-bottom': isMobile ? '43px' : 0}">
+              <div class="service-info nice-font">
+                <h3 class="nice-font service-name desctop">Заяви онлайн консултация</h3>
+                <p style="text-align: justify;">В случай, че желаете да стартирате свой онлайн бизнес
+                   или сайт предоставящ определена информация, но не сте запознат с юридическия аспект и
+                    методиката за създаването му, нашият екип е готов да окаже съдействие, относно всички необходими 
+                    действия, които трябва да предприемете. Възползвайте се от нашата услуга, а 
+                    ние ще Ви предоставим цялата информация, която Ви е нужна за да реализирате своите идеи.
+                </p>
+              </div>
+            </div>
+            <div v-if="isMobile">
+             
+              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+              </div>
+            </div>
+            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
+                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
+            </div>
+          </article>
+          <article id="terms" class="service-details" style="margin-top: 40px;">
             <b v-if="isMobile" class="nice-font service-name ">Общи условия за сайт</b>
-            <img class="service-image" src="../assets/images/terms-and-conditions.jpg" alt="">
+            <img class="service-image" src="../assets/images/terms-and-conditions.jpg" alt="Terms and conditions">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name desctop">Общи условия за сайт</b>
+                <h3 class="nice-font service-name desctop">Общи условия за сайт</h3>
                 <p style="text-align: justify;">Всеки собственик на сайт влиза в регулирани от правото отношения със 
                   своите потребители, без значение дали става въпрос за онлайн магазин или чисто информативен сайт. 
                   В редица случаи, общите условия за подобен тип сайтове се пренебрегват и това води до неблагоприятни 
@@ -102,10 +126,10 @@
           </article>
           <article id="shop" class="service-details" style="margin-top: 40px;">
             <b v-if="isMobile" class="nice-font service-name ">Общи условия за онлайн магазин</b>
-            <img class="service-image" style="    height: 413px;width: 420px;" src="../assets/images/online-shop.jpg" alt="">
+            <img class="service-image" style="    height: 413px;width: 420px;" src="../assets/images/online-shop.jpg" alt="Signing documents">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name desctop">Общи условия за онлайн магазин</b>
+                <h3 class="nice-font service-name desctop">Общи условия за онлайн магазин</h3>
                 <p style="text-align: justify;">Общите условия са най-добрият вариант за уреждане на 
                   отношенията между търговците, които сключват много на брой едностранни сделки с потребителите, 
                   използващи техните онлайн магазини. Законът за защита на потребителите задължава собствениците на
@@ -138,10 +162,10 @@
           </article>
           <article id="gdpr" class="service-details"  style="margin-top: 40px;">
             <b v-if="isMobile" class="nice-font service-name">Политика за поверителност на личните данни</b>
-            <img class="service-image" src="../assets/images/GDPR.png" alt="">
+            <img class="service-image" src="../assets/images/GDPR.png" alt="GDPR icon">
             <div class="services-row">
               <div class="service-info nice-font">
-                <b class="nice-font service-name desctop">Политика за поверителност на личните данни</b>
+                <h3 class="nice-font service-name desctop">Политика за поверителност на личните данни</h3>
                 <p style="text-align: justify;">С приемането на регламента за защита на личните данни (GDPR) 
                   се въведоха редица правила относно обработването на личните данни на потребителите, 
                   посещаващи интернет сайтове. Всеки сайт трябва изчерпателно да опише какви лични данни обработва,
@@ -161,30 +185,6 @@
                 <p style="margin-bottom: 0;width: 200px;"><b>Цена:</b> 80.00 лв.</p>
                 <p><b>Срок:</b> в рамките на 5 работни дни.</p>
               </div>
-              <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
-                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
-              </div>
-            </div>
-            <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button desctop">
-                        <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
-            </div>
-          </article>
-          <article id="gdpr" class="service-details"  style="margin-top: 40px;">
-            <b v-if="isMobile" class="nice-font service-name">Заяви онлайн консултация</b>
-            <img class="service-image" src="../assets/images/consultation.jpg" alt="">
-            <div class="services-row" :style="{'padding-bottom': isMobile ? '43px' : 0}">
-              <div class="service-info nice-font">
-                <b class="nice-font service-name desctop">Заяви онлайн консултация</b>
-                <p style="text-align: justify;">В случай, че желаете да стартирате свой онлайн бизнес
-                   или сайт предоставящ определена информация, но не сте запознат с юридическия аспект и
-                    методиката за създаването му, нашият екип е готов да окаже съдействие, относно всички необходими 
-                    действия, които трябва да предприемете. Възползвайте се от нашата услуга, а 
-                    ние ще Ви предоставим цялата информация, която Ви е нужна за да реализирате своите идеи.
-                </p>
-              </div>
-            </div>
-            <div v-if="isMobile">
-             
               <div @click="$router.push({name: 'request'})" class="request-online-btn main-white-button">
                         <a style="cursor: pointer;"><i class="fa fa-eye"></i> Заяви онлайн</a>
               </div>
