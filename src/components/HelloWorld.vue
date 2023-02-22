@@ -70,7 +70,7 @@
        <section id="services" class="services-wrapper">
         <article id="gdpr" class="service-details"  >
             <b v-if="isMobile" class="nice-font service-name">Заяви онлайн консултация</b>
-            <img class="service-image" src="../assets/images/consultation-min.jpg" alt="Handshake">
+            <img class="service-image" src="../assets/images/Consultation-pic-for-RoATP-1000x525.jpg" alt="Handshake">
             <div class="services-row" :style="{'padding-bottom': isMobile ? '43px' : 0}">
               <div class="service-info nice-font">
                 <h3 class="nice-font service-name desctop">Заяви онлайн консултация</h3>
